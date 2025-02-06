@@ -11,11 +11,13 @@
             cursor: pointer;
         }
     </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="task-container bg-light rounded">
-            <h3>To-Do List</h3>
+            <h3 class="text-center">To-Do List</h3>
             <div class="task-form">
                 <form method="POST" action="add.php" class="d-flex justify-content-center align-items-center gap-2">
                     <input type="text" 
