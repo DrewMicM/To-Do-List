@@ -10,6 +10,9 @@
             height: 20px;
             cursor: pointer;
         }
+        .strikethrough {
+            text-decoration: line-through;
+        }
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -96,10 +99,10 @@
                                     </td>
                                     <td>
                                         <span class="badge <?php
-                                            echo match($fetch['priority']) {
-                                                'High' => 'bg-danger',
-                                                'Medium' => 'bg-warning text-dark',
-                                                'Low' => 'bg-success',
+                                            echo match(strtoupper($fetch['priority'])) {
+                                                'HIGH' => 'bg-danger',
+                                                'MEDIUM' => 'bg-warning text-dark',
+                                                'LOW' => 'bg-success',
                                                 default => 'bg-secondary'
                                             };
                                         ?>">
@@ -147,7 +150,6 @@
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // Refresh halaman atau update UI
                 location.reload();
             } else {
                 alert('Failed to update task status');
