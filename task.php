@@ -122,8 +122,7 @@
                                         <a href="edit.php?task_id=<?= $fetch['task_id']; ?>" 
                                            class="btn btn-warning btn-sm me-2">Edit</a>
                                         <a href="delete_query.php?task_id=<?= $fetch['task_id']; ?>" 
-                                           class="btn btn-danger btn-sm" 
-                                           onclick="return confirm('Are you sure you want to delete this task?');">
+                                           class="btn btn-danger btn-sm">
                                             Delete
                                         </a>
                                     </td>
