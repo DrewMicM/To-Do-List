@@ -116,11 +116,6 @@
                                                    <?= $is_done ? 'checked' : '' ?>
                                                    onchange="updateTaskStatus(<?= $fetch['task_id']; ?>, this.checked)"
                                                    id="task_<?= $fetch['task_id']; ?>">
-                                            <?php if ($is_done): ?>
-                                                <span class="badge bg-success" hidden>Done</span>
-                                            <?php else: ?>
-                                                <span class="badge bg-warning text-dark" hidden>Pending</span>
-                                            <?php endif; ?>
                                         </div>
                                     </td>
                                     <td>
